@@ -13,7 +13,9 @@ Copy the folder 'ESP8266NeeoSDK' into your Arduino `Libraries` folder, as descri
 This implementation does not include any of the idiot checking that is found in the node.js version.
 
 At this time only type 'button' works.
-No sensors, no sliders, no imageurls.
+No sensors, no sliders, no imageurls.....
+
+There are lots of diag messages in here at the moment.   There will be a lot of serial traffic.
 
 ## Usage 
 
@@ -48,26 +50,26 @@ Once a device has been added you can add extra search tokens, button handler fun
 All the add functions return bool so you can again check for success or failure.
 
 ```C
-	int deviceIndex = neeoRemote.addDevice("Test Device", "Device Inc", "ACCESSOIRE");
-	neeoRemote.addButtonHandler(deviceIndex, deviceButtonHandler);
+    int deviceIndex = neeoRemote.addDevice("Test Device", "Device Inc", "ACCESSOIRE");
+    neeoRemote.addButtonHandler(deviceIndex, deviceButtonHandler);
 
     neeoRemote.addSearchTokens(deviceIndex, "testdevice");
 
-	neeoRemote.addButton(deviceIndex, "POWER ON", "Power On");
-	neeoRemote.addButton(deviceIndex, "POWER OFF", "Power Off");
+    neeoRemote.addButton(deviceIndex, "POWER ON", "Power On");
+    neeoRemote.addButton(deviceIndex, "POWER OFF", "Power Off");
 ```
 
 Once the devices have been set up the server needs to be registered and started
 ```C
-	if(neeoRemote.registerServer())
-		Serial.println("Server Registered");
-	else
-		Serial.println("Register failed");
+    if(neeoRemote.registerServer())
+        Serial.println("Server Registered");
+    else
+        Serial.println("Register failed");
 
-	if(neeoRemote.startServer(&neeoServer))
-		Serial.println("Server Started");
-	else
-		Serial.println("Start failed");    
+    if(neeoRemote.startServer(&neeoServer))
+        Serial.println("Server Started");
+    else
+        Serial.println("Start failed");    
 ```
 
 And all that is needed in the loop is
