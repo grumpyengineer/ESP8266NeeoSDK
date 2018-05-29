@@ -4,7 +4,7 @@
 The original code can be found here https://github.com/NEEOInc/neeo-sdk
 Examples for the SDK can be found here https://github.com/NEEOInc/neeo-sdk-examples
 
-**Note:** This is a work in progress and is extreme alpha right now!
+**Note:** This is a work in progress and is extreme alpha right now!   I am aware of the lack of comments, messy formatting and debug code left in.
 
 ## Installation
 Copy the folder 'ESP8266NeeoSDK' into your Arduino `Libraries` folder, as described in the [Arduino documentation](<http://arduino.cc/en/Guide/Libraries>).
@@ -14,8 +14,6 @@ This implementation does not include any of the idiot checking that is found in 
 
 At this time only type 'button' works.
 No sensors, no sliders, no imageurls.....
-
-There are lots of diag messages in here at the moment.   There will be a lot of serial traffic.
 
 ## Usage 
 
