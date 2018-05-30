@@ -17,6 +17,8 @@ No sensors, no sliders, no imageurls.....
 
 ## Usage 
 
+I've only tested this on a NodeMCU 1.0 type board, ESP-12E.
+
 At the top of your sketch you must include the **ESP8266NeeoSDK** header file
 
 ```C
